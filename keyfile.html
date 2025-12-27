@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<title>Key Verification</title>
+	<style>
+		body {
+			background: #0f0f0f;
+			color: white;
+			font-family: Arial, sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.box {
+			background: #1a1a1a;
+			padding: 30px;
+			border-radius: 12px;
+			width: 300px;
+			text-align: center;
+		}
+
+		input {
+			width: 100%;
+			padding: 10px;
+			border-radius: 6px;
+			border: none;
+			margin-bottom: 15px;
+		}
+
+		button {
+			width: 100%;
+			padding: 10px;
+			border-radius: 6px;
+			border: none;
+			background: #00aaff;
+			color: white;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.key {
+			margin-top: 20px;
+			font-size: 18px;
+			color: #00ff99;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="box">
+		<h2>🔐 Verificação</h2>
+
+		<input id="code" placeholder="Insere o código">
+		<button onclick="check()">Verificar</button>
+
+		<div class="key" id="key">
+			Tua key:<br><b>devjay1232</b>
+		</div>
+	</div>
+
+	<script>
+		function check() {
+			const input = document.getElementById("code").value;
+			const keyBox = document.getElementById("key");
+
+			if (input === "2026update") {
+				keyBox.style.display = "block";
+			} else {
+				alert("Código inválido ❌");
+			}
+		}
+	</script>
+
+</body>
+</html>
